@@ -19,7 +19,7 @@ public class MainController {
 
 		Random rand = new Random();
 			arrayList.add(rand.nextInt(1000));
-		}
+		
 		System.out.println(direction);
 		if (direction.equals("ascend")) {
 			Collections.sort(arrayList);
