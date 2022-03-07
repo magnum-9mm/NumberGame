@@ -16,11 +16,14 @@ public class MainController {
 	public @ResponseBody ArrayList<Integer> enterNumber(@RequestParam Integer n, @RequestParam String direction) {
 
 		ArrayList<Integer> arrayList = new ArrayList<Integer>();
-
-		Random rand = new Random();
-			arrayList.add(rand.nextInt(1000));
 		
-		System.out.println(direction);
+		Random rand = new Random();
+		for(int i =0;i<n;i++) {
+			arrayList.add(rand.nextInt(1000));	
+		}
+		
+		
+		System.out.println(direction+n);
 		if (direction.equals("ascend")) {
 			Collections.sort(arrayList);
 		} else {
@@ -33,3 +36,4 @@ public class MainController {
 	}
 
 }
+	
